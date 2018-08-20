@@ -1,6 +1,6 @@
 # SPie
 
-> 轻量级、无依赖的圆头效果环形图控件
+> 轻量级、无依赖的圆头效果环形图控件。 [DEMO](https://snailsword.github.io/spie/demo.html)
 
 ## 安装 Installation
 
@@ -20,7 +20,7 @@ $ npm install spie
 
 ### 使用 Usage
 
-新建一个元素，设置好宽高(绘制的环形图将充满该元素)。
+新建一个元素，设置好宽高(绘制的环形图将充满该元素)。
 
 ```html
 <div id="spie-1" style="height: 100px;width: 100px">
@@ -31,7 +31,7 @@ let s1 = s.init(document.getElementById('spie-1'));
 s1.setOption().setData(0.2);
 ```
 
-或
+或
 
 ```js
 let s1 = s.init(document.getElementById('spie-1'));
@@ -79,10 +79,8 @@ s.setOption({
 
 
 
-#### 设置数据时延 Delay
+#### 设置数据时延 Delay
 
 ```js
 s.setOption().setData(0.2, 1); // delay 1s
 ```
-
-

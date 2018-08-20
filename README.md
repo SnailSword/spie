@@ -20,7 +20,7 @@ $ npm install spie
 
 ### 使用 Usage
 
-新建一个元素，设置好宽高(绘制的环形图将充满该元素)。
+新建一个元素，设置好宽高(绘制的环形图将充满该元素)。
 
 ```html
 <div id="spie-1" style="height: 100px;width: 100px">

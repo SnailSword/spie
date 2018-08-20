@@ -1,6 +1,6 @@
 {
   "name": "spie",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A ring diagram tool base on SVG",
   "main": "index.js",
   "scripts": {

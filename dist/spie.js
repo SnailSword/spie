@@ -243,7 +243,8 @@
       }, {
           key: '_getRad',
           value: function _getRad(p) {
-              var minMun = Math.pow(0.1, this.option.precision) * 5;
+              var precision = this.option.precision;
+              var minMun = (Math.pow(0.1, precision) * 5).toFixed(precision);
               if (!p) {
                   return this.min;
               }

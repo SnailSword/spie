@@ -190,7 +190,8 @@ export default class SPie {
      * @return {number} 相对offset
      */
     _getRad(p) {
-        const minMun = Math.pow(0.1, this.option.precision) * 5;
+        let precision = this.option.precision
+        const minMun = (Math.pow(0.1, precision) * 5).toFixed(precision);
         if (!p) {
             return this.min;
         }

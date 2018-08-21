@@ -56,6 +56,10 @@
             <h2>行动迟缓的环形图</h2>
             <div id="spie-9" class="spie"></div>
         </section>
+        <section>
+            <h2>数很小的环形图</h2>
+            <div id="spie-10" class="spie"></div>
+        </section>
     </div>
     <script>
     const s = SPie;
@@ -102,6 +106,13 @@
             duration: 10
         }
     }).setData(0.7);
+    let s10 = s.init(document.getElementById('spie-10'));
+    s10.setOption({
+        bgc: '#eee',
+        animation: {
+            duration: 10
+        }
+    }).setData(0.0006);
     function changeS5() {
         change(s5);
     }

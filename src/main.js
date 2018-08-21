@@ -15,6 +15,8 @@ export default class SPie {
         this.highest = 0;
         // 0%的位置
         this.min = 800;
+        // 大于0%的最小位置
+        this.lowest = 800 - 0.1;
     }
 
     static init(dom) {
@@ -198,7 +200,7 @@ export default class SPie {
         if (p >= (1 - minMun)) {
             return this.max;
         }
-        return this.min - p * (this.min - this.highest);
+        return this.lowest - p * (this.lowest - this.highest);
     }
 
     /**

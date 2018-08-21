@@ -55,7 +55,7 @@ s.setOption({
 
   圆环底色
 
-* `radius` (default: `[0.35, 0.8]`)
+* `radius` (default: `[0.6, 0.8]`)
 
   内外半径
 

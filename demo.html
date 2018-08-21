@@ -40,6 +40,22 @@
             <h2>等你来撩的环形图</h2>
             <div id="spie-5" class="spie" onclick="changeS5()" style="cursor: pointer;"></div>
         </section>
+        <section>
+            <h2>差点满了的环形图</h2>
+            <div id="spie-6" class="spie"></div>
+        </section>
+        <section>
+            <h2>胖胖的环形图</h2>
+            <div id="spie-7" class="spie"></div>
+        </section>
+        <section>
+            <h2>瘦瘦的环形图</h2>
+            <div id="spie-8" class="spie"></div>
+        </section>
+        <section>
+            <h2>行动迟缓的环形图</h2>
+            <div id="spie-9" class="spie"></div>
+        </section>
     </div>
     <script>
     const s = SPie;
@@ -60,11 +76,32 @@
     let s4 = s.init(document.getElementById('spie-4'));
     s4.setOption({
         bgc: '#eee'
-    }).setData(1, 1.5);
+    }).setData(1, 2.5);
     let s5 = s.init(document.getElementById('spie-5'));
     s5.setOption({
         bgc: '#eee'
     });
+    let s6 = s.init(document.getElementById('spie-6'));
+    s6.setOption({
+        bgc: '#eee'
+    }).setData(0.9994);
+    let s7 = s.init(document.getElementById('spie-7'));
+    s7.setOption({
+        bgc: '#eee',
+        radius: [0.3, 0.8]
+    }).setData(0.5);
+    let s8 = s.init(document.getElementById('spie-8'));
+    s8.setOption({
+        bgc: '#eee',
+        radius: [0.7, 0.8]
+    }).setData(0.6);
+    let s9 = s.init(document.getElementById('spie-9'));
+    s9.setOption({
+        bgc: '#eee',
+        animation: {
+            duration: 10
+        }
+    }).setData(0.7);
     function changeS5() {
         change(s5);
     }

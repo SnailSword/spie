@@ -61,7 +61,7 @@ s.setOption({
 
 * `precision` (default: `4`)
 
-  精度 小于`0.1^precision`视为`0`, 大于等于`1-0.1^precision`视为`1`, 这个配置是为了防止出现两端圆弧出现重叠。
+  精度 小于`0.1^precision*5`视为`0`, 大于等于`1-0.1^precision*5`视为`1`, 这个配置是为了在需要显示具体数字时防止出现四舍五入到0或1之后圆环没有对应变空变满，防止出现两端圆弧出现重叠。
 
 * `animation.show` (default: `true`)
 

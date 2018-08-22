@@ -60,6 +60,10 @@
             <h2>数很小的环形图</h2>
             <div id="spie-10" class="spie"></div>
         </section>
+        <section>
+            <h2>逆时针转的环形图</h2>
+            <div id="spie-11" class="spie"></div>
+        </section>
     </div>
     <script>
     const s = SPie;
@@ -68,8 +72,9 @@
     let s2 = s.init(document.getElementById('spie-2'));
     s2.setOption({
         bgc: '#eee',
-        color: '#5fb333'
-    }).setData(0.3);
+        color: '#5fb333',
+        startingPoint: '70deg'
+    }).setData('49.5%', 0.5);
     let s3 = s.init(document.getElementById('spie-3'));
     s3.setOption({
         bgc: '#eee',
@@ -88,12 +93,12 @@
     let s6 = s.init(document.getElementById('spie-6'));
     s6.setOption({
         bgc: '#eee'
-    }).setData(0.9994);
+    }).setData(0.9994, 0.6);
     let s7 = s.init(document.getElementById('spie-7'));
     s7.setOption({
         bgc: '#eee',
-        radius: [0.3, 0.8]
-    }).setData(0.5);
+        radius: ['32%', 0.8]
+    }).setData(0.5, 0.7);
     let s8 = s.init(document.getElementById('spie-8'));
     s8.setOption({
         bgc: '#eee',
@@ -112,7 +117,13 @@
         animation: {
             duration: 10
         }
-    }).setData(0.0006);
+    }).setData(0.0006, 0.9);
+    let s11 = s.init(document.getElementById('spie-11'));
+    s11.setOption({
+        bgc: '#eee',
+        startingPoint: 135,
+        clockwise: false
+    }).setData(0.9, 0.8);
     function changeS5() {
         change(s5);
     }

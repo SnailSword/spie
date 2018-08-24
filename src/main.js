@@ -48,7 +48,7 @@ export default class SPie {
      */
     setOption(option = {}) {
         this.option = this.defaultOption;
-        this._setEffectiveOption(option, this.option);
+        this._extend(option, this.option);
         this._pretreatRadius()._processRadius();
         this._processStartPoint();
         let template = this._getTemplate(this.option);
@@ -78,15 +78,26 @@ export default class SPie {
      * @param {Object} option 每一层的传入的配置
      * @param {Object} defaultOption 每一层的默认配置
      */
-    _setEffectiveOption(option, defaultOption) {
+    _extend(option, defaultOption) {
         Object.keys(option).forEach(key => {
-            if (typeof option[key] === 'object') {
-                this._setEffectiveOption(option[key], defaultOption[key]);
+            if (this._typeOf(option[key]) === 'Object') {
+                this._extend(option[key], defaultOption[key]);
             }
             else {
                 defaultOption[key] = option[key];
             }
         });
+    }
+
+    /**
+     * 判断是不是object
+     *
+     * @param {*} x 带判断的值
+     *
+     * @return {boolean} 是否为object
+     */
+    _typeOf(x) {
+        return Object.prototype.toString.call(x).slice(8, -1);
     }
 
     /**
@@ -104,7 +115,8 @@ export default class SPie {
                 show: true,
                 duration: 1,
                 easing: 'ease-in-out'
-            }
+            },
+            sw: 0.2
         };
     }
 
@@ -221,12 +233,14 @@ export default class SPie {
 
     /**
      * 1. 通过option中的内半径和外半径计算svg圆的半径与stroke-width
+     *    如果r1 === r2 或只输入了一个r 用默认线宽作为线宽
      * 2. 计算两端刚好相切时的 offset
      */
     _processRadius() {
-        const [r1, r2] = this.option.radius;
+        let [r1, r2] = this.option.radius;
+        r2 = r2 || r1;
         // 线宽
-        const sw = Math.abs(r1 - r2);
+        const sw = Math.abs(r1 - r2) || this.option.sw;
         // 直径
         const d = r1 + r2;
         // 半径

@@ -18,7 +18,7 @@ $ npm install spie
 <script src="path/to/spie/dist/spie.js"></script>
 ```
 
-### 使用 Usage
+## 使用 Usage
 
 新建一个元素，设置好宽高(绘制的环形图将充满该元素)。
 
@@ -39,7 +39,7 @@ s1.setOption();
 s1.setData(0.2);
 ```
 
-#### 自定义参数 Custom Options
+### 自定义参数 Custom Options
 
 ```js
 s.setOption({
@@ -91,7 +91,7 @@ s.setOption({
 
 
 
-#### 设置数据时延 Delay
+### 设置数据时延 Delay
 
 ```js
 s.setOption().setData(0.2, 1); // delay 1s

@@ -18,6 +18,12 @@ $ npm install spie
 <script src="path/to/spie/dist/spie.js"></script>
 ```
 
+### CDN
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/spie@latest/dist/spie.js"></script>
+```
+
 ## 使用 Usage
 
 新建一个元素，设置好宽高(绘制的环形图将充满该元素)。

@@ -1,6 +1,7 @@
 /**
  * @file 环形图
  * @author saniac(snailsword@gmail.com)
+ * https://github.com/SnailSword/spie
  */
 
 const R = 50;

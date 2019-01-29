@@ -1,3 +1,6 @@
+![npmv](https://img.shields.io/npm/v/spie.svg)
+![size](https://img.shields.io/github/size/SnailSword/spie/dist/spie.js.svg)
+
 # SPie
 
 > 轻量级、无依赖的圆头效果环形图控件。 [DEMO](https://snailsword.github.io/spie/demo.html)
